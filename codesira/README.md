@@ -98,3 +98,4 @@ Proyecto de demostración educativa. Libre uso con fines de aprendizaje.
 - **Programador**: si un riego programado no puede ejecutarse, avisa una sola vez en lugar de repetir la alerta cada segundo.
 - Fechas "hoy/ayer/mes" calculadas en hora local (antes en UTC).
 - Navegación con los botones Atrás/Adelante del navegador.
+Actualización del proyecto SIRA para registrar el primer commit descriptivo.
