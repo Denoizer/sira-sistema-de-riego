@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIRA — Sistema de Riego Inteligente Adaptativo</title>
+<meta name="description" content="SIRA: sistema de riego inteligente adaptativo con monitoreo de fuentes de agua, predicción climática y motor de IA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+    <div class="sidebar__logo"><span class="sidebar__logo-icon">💧</span> SIRA</div>
+    <div class="sidebar__sub">Riego Inteligente Adaptativo</div>
+    <nav class="sidebar__nav" id="nav">
+      <a href="#dashboard" class="nav-link" data-route="dashboard">🏠 <span>Dashboard</span></a>
+      <a href="#zonas" class="nav-link" data-route="zonas">🌱 <span>Zonas de Riego</span></a>
+      <a href="#distribuidores" class="nav-link" data-route="distribuidores">🚰 <span>Distribuidores</span></a>
+      <a href="#agua" class="nav-link" data-route="agua">💧 <span>Fuentes de Agua</span></a>
+      <a href="#clima" class="nav-link" data-route="clima">🌤️ <span>Clima y ETc</span></a>
+      <a href="#ia" class="nav-link" data-route="ia">🤖 <span>IA Optimización</span></a>
+      <a href="#historial" class="nav-link" data-route="historial">📋 <span>Historial</span></a>
+      <a href="#dispositivos" class="nav-link" data-route="dispositivos">📡 <span>Dispositivos</span></a>
+      <a href="#programacion" class="nav-link" data-route="programacion">📅 <span>Programación</span></a>
+      <a href="#alertas" class="nav-link" data-route="alertas">🔔 <span>Alertas</span><span class="badge badge--nav" id="navAlertBadge" hidden>0</span></a>
+      <a href="#mantenimiento" class="nav-link" data-route="mantenimiento">🛠️ <span>Mantenimiento</span></a>
+      <a href="#configuracion" class="nav-link" data-route="configuracion">⚙️ <span>Configuración</span></a>
+    </nav>
+    <div class="sidebar__foot">v1.0 · Datos locales</div>
+  </aside>
+
+  <div class="main">
+    <header class="header">
+      <button class="btn btn--icon btn--menu" id="btnMenu" aria-label="Abrir menú">☰</button>
+      <h1 class="header__title" id="sectionTitle">Dashboard</h1>
+      <div class="header__right">
+        <span class="header__clock" id="clock" aria-live="off">—</span>
+        <button class="btn btn--icon" id="btnAlerts" aria-label="Ver alertas">🔔<span class="badge" id="alertBadge" hidden>0</span></button>
+        <button class="btn btn--icon" id="btnConfigQuick" aria-label="Configuración">⚙️</button>
+      </div>
+    </header>
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+</div>
+
+<div id="toastContainer" class="toast-container" aria-live="polite"></div>
+<div id="modalRoot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/ia.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
